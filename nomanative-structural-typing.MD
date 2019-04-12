@@ -10,7 +10,7 @@ So now that we have established that these rules must be answered when two types
 
 There are main roads that will answer that. One of them is ```nominal typing``` and the other is ```strcutural typing```. 
 
-## Nominal (sub)typing
+## Nominative (sub)typing
 
 The idea behind nominal typing is to express the answer of the questions by checking the ```name``` of each type. This is the most simple way to do so, and does not necessarily requires some fancy algorithm to type check. 
 
