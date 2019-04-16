@@ -1,9 +1,5 @@
 The idea for this small article is to bring the idea of dependent type theory to the table. I will not extend the piece in the math of it, because [1] covers it way better than I could.
 
-# Naming
-
-One of the things I was having a bad time to understand was the *naming* for the concept. The thing is: **dependent type theory** is just a way to call **Martin-Löf type theory**, which is also known as **intuitionisc** type theory. So I'll try to use them interchangeably in order to get used to it.
-
 # The idea
 
 The idea for dependent type theory is to use types as a high order construct. As for high order, I mean that you will be able to use the return value of an expression as a Type. This looks like a simple idea and may also seem that is has no utility - but this is because people are not used to it. 
@@ -68,6 +64,9 @@ The whole idea of dependent types is to achieve type safety. In fact, every type
 # References
 
 [1] http://www.cse.chalmers.se/~peterd/papers/MartinL%C3%B6f1984.pdf
+
 [2] http://www.kframework.org/images/5/5e/Cayenne.pdf
+
 [3] Friedman, Daniel P. and Christiansen, David Thrane. 2018: The Little Typer. MIT Press Ltd
+
 [4] https://wiki.haskell.org/Kind
