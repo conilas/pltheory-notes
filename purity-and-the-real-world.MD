@@ -7,7 +7,7 @@ The idea of this small article is to bring out the idea of why do functional lan
 * Impure functions can be transformed to pure by using the World as an argument, in which the function would receive the current world, transform it based on some other arguments and return the new World so it can be passed along
 * As we need to have the same arguments from function to function - the world - and wait for each command to happen (an imperative way of thinking), we may model it as a monad
 
-# Purity
+## Purity
 
 Okay, so we start with the following: the real-world programmer, the one working in a CRUD API using a not-so-much RESTFull architecture, does not (in general) know what is a pure function. In fact, he doesn't *have* to: imperative programming languages (such as Java, C++, Ruby or so) abstract all this concept and leave only the business part for the developer. The idea behind this is that people need to focus on results, not details. 
 
@@ -87,7 +87,7 @@ echo = getChar >>= putChar
 
 I will not extend myself in monads because there is already another article about it (what? you didn't see? so go check it out! =D). But the idea is rather simple: think of it like a container that has your value, and you can map that value applying some function (that also receives the same type) and lift it. That's basically it.. or not (go read the article!). 
 
-# References
+## References
 
 [1] https://www.microsoft.com/en-us/research/wp-content/uploads/2016/07/mark.pdf
 [2] http://skiplang.com/
