@@ -90,5 +90,7 @@ I will not extend myself in monads because there is already another article abou
 ## References
 
 [1] https://www.microsoft.com/en-us/research/wp-content/uploads/2016/07/mark.pdf
+
 [2] http://skiplang.com/
+
 [3] https://github.com/conilas/pltheory-notes/blob/master/depedent-types.MD
