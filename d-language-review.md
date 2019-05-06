@@ -43,7 +43,7 @@ Which, as you see: makes sure that A and B are greater than 0 and that the retur
 
 D also has invariants to control state, such as:
 
-```
+```D
 class Date
 {
     int day;
