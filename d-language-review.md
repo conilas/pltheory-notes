@@ -99,6 +99,8 @@ It has the null type and lacks an optional monad for the default mechanism to av
 not wasting time on basic stuff (inheritance, it has a simple type system and bla bla);
 not wasting time on environment (the DUB and blabla)
 
+green stuff and whatnot
+
 ## References
 
 [1] - http://www.softwarepreservation.org/projects/c_plus_plus/
