@@ -10,6 +10,8 @@ I could, and I wished to, go on about effects - maybe talk about monads and side
 
 We are going to need a running installation of Koka-lang, a language which contains effect handlers (and a lot more, indeed; check the language out in https://koka-lang.github.io/koka/doc/kokaspec.html#sec-an-overview-of-koka). That should be enough to get you going.
 
+> SELF NOTE: this should not be a list
+
 I won't waste your time by going through the syntax; if you are already familiarized with the C-syntax, you should be good to go. If you aren't, then:
 
 * You might only program in decent functional languages, which means you probably know more than I do. So, please, GTFO here;
@@ -52,6 +54,8 @@ fun randomSuicideWay() : <console, ndet> (){
 ```
 
 > Please ignore the shitty code. It is only here because this is also a shitty tutorial.
+
+> SELF NOTE: expand more stuff here
 
 Okay, so this is new. Our function has the signature ```fun randomSuicideWay() : <console, ndet> ()```, which means:
 
