@@ -6,15 +6,17 @@ The idea for algebraic effect handlers is simple: whenever some computation occu
 
 If you are familiar to CLU or something newer, such as Java, you've already been through something like it - exceptions, for instance, can be seen as *computational effects* of a program[1]. 
 
-But languages and the idea has evolved. You can now define new effects for your programs - you can declare what is an effect and how it can be handled. For instance, one can declare that the calling of a function *is* an algebraic effect, and handle that effect in any way it is needed.
+You can also define new effects for your programs - you can declare what is an effect and how it can be handled. For instance, one can declare that the calling of a function *is* an algebraic effect, and handle that effect in any way it is needed.
 
 It is a simple concept to use - the idea of handling when and how you want a side effect is pretty pleasant and usefull. Of course, as many *compsci* concepts, the math (and theoretical) part of it is not that easy to explain. 
 
 If one understand the idea behind monads - no, not *just monoids in the category of endofunctors* - and why they can be used to handle side effects[4], then it will be easy to see why algebraic effect handlers can be used to achieve similar goals (and also why they can be even better for that matter[1]). And if you don't, well, [it is never too late to learn something new :-)](https://conilas.github.io/purity-and-the-real-world/). 
 
-**Note**: I'm not talking about monads as a whole, just the idea of using them to handle side effects - or computations, if you will - in the program.
+**Note**: I'm not talking about monads as a whole, just the idea of using them to handle side effects - or *computations*, if you will - in the program.
 
-But if you're reading this, you probably don't really get monads. Neither why they are used for that purpose. To be honest, you don't need to understand them, as this article's idea is to show you how to use effect handlers and why they can be usefull. Let's begin, shall we?
+But if you're reading this, you probably don't really get monads. Neither why they are used for that purpose. To be honest, you don't need to understand them, as this article's idea is to show you how to use effect handlers and why they can be usefull.
+
+Let's begin, shall we?
 
 ## What we need
 
