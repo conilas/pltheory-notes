@@ -26,7 +26,7 @@ I won't waste your time by going through the syntax; if you are already familiar
 
 ## What we are going to do
 
-And now, for the idea. I'll show how to handle a call of a function which, whenever called, will print a way for you to kill yourself.
+And now, for the idea. I'll show how to handle a call of a function which, whenever called, will be considered an effect and will trigger a handler.
 
 In order to start with it, open up a new file with the extension ```.kk``` (the koka extension) and let's start by writing our effect.
 
@@ -36,9 +36,25 @@ effect suicidal{
 }
 ```
 
-Okay, so here we are doing the following: creating an effect called suicidal which define which function belongs to it - in this case, the ```print_me``` function. 
+Okay, so here we are doing the following: creating an effect called suicidal which defines a function that belongs to it - in this case, the ```print_me``` function. 
 
-This means that the print_me function will need a handler to handle such effect - oh! so we now need to declare our pretty handler. But, as I told you before, we need this handler to call a function that will output a way for you to kill yourself - randomically - everytime the effect happens. So let's first write down that function.
+This means that the print_me function will need a handler to handle such effect - oh! so we now need to declare our pretty handler. Let's also write it down.
+
+```koka
+val suicidal_handler = handler {
+  return   x -> [x]
+  print_me(s:string) -> {
+    println(s)
+    resume(...)
+  }
+}
+```
+
+You see, the ```...``` was left there on purpose. We will need something to be called on that part of the function - something that will be called whenever that effects happens. And here goes the idea.
+
+## Kill yourself
+
+We will use this handler to call a function that will output a way for you to kill yourself - randomically - everytime the effect happens. So let's first write down that function.
 
 ```koka
 fun randomSuicideWay() : <console, ndet> (){
@@ -70,9 +86,9 @@ Okay, so this is new. Our function has the signature ```fun randomSuicideWay() :
 
 The side effects annotated are where I'm trying to get. This actually means that the function that will handle our side effect (```suicidal```) also have two side effects - one for the console, which means it will perform IO, and one for ndet, which is short for non-determinism that happens when we call the random-int function. 
 
-This means we could also have handlers for those. And this also means that we have to tell the compiler we are going to have those side effects in our code (except those two are a special case that you can read in the book) - at the end, we need to handle all side effects we wish to, meaning we can control all the cases in order to avoid side-effect functions! That's the beauty of it.
+This means we could also have handlers for those. And this also means that we have to tell the compiler we are going to have those side effects in our code (except those two are a special case that you can read in the book) - at the end, we need to handle all side effects we wish to, meaning we can control all the cases in order to avoid unhandled side-effects! That's the beauty of it.
 
-Maybe even after that you didn't understand what I mean, because I suck at explaining stuff. But let's keep going. Now that we have our function to be executed, we must create our handler to actually perform it!
+Maybe even after that you didn't understand what I mean, because I suck at explaining stuff. But let's keep going. Now that we have our function to be executed, we must edit our handler to actually call it. Let's remove the ```...``` and add the function call.
 
 ```koka
 val suicidal_handler = handler {
@@ -84,7 +100,7 @@ val suicidal_handler = handler {
 }
 ```
 
-Okay, so let's see if we are complete now. We created out effect, named ```suicidal```, which wrapts the function named ```print_me```. We've also created the function to print a random way to die and a handler to call it out. 
+Okay, so let's see if we are complete now. We've created our effect, named ```suicidal```, which wraps the function named ```print_me```. We've also created the function to print a random way to die and a handler to call it out. 
 
 Okay, so... let's try to trigger our function now:
 
@@ -103,7 +119,11 @@ fun main() {
 }
 ```
 
-So, as you see, we are performing some extensive calculations with x1 and x2. We then print the result of our calculation with a happy message, but we also warn the compiler that this has the suicidal effect, and that we are handling it with the suicidal handler.
+Note that we are declaring a ```suicidal_handler``` block, which can be translated as: *use the suicidal handler for every effect of its type*. 
+
+Remeber the ```randomSuicideWay``` function, in which we had annotated it had two side effects - ```ndet``` and ```console```? Well, now the ```extensive_calculation``` function also has it's effects - ```console``` and ```suicidal```. 
+
+They will be handled the way the caller wants to - in this case, which the ```suicidal_handler``` handler.
 
 Running the code, we get...
 
