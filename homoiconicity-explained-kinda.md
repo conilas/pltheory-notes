@@ -6,7 +6,7 @@ Well, this article is about another ill-defined term, and it probably wont clear
 
 Let's begin with the actual definition - or, at least, the widespread one. If you ask around "what is the meaning of homoiconicity in the context of programming languages", some people will laugh at you because that is not applied to webdev and say you are out of date and should go study node, react or some other JS-trending stuff. But as for the other developers, they'd tell you that being homoiconic means **repesenting code as data (and vice versa)**.
 
-This concept looks simple at first - but it gets tricky when you think about what data is and what code is. Because with that definition, we could say that JS, for having an ```eval``` function, does represent code as string and data as string, so you can manipualte both the same way and call the evaluation function. 
+This concept looks simple at first - but it gets tricky when you think about what data is and what code is. Because with that definition, we could say that JS, for having an ```eval``` function, does represent code as string and data as string, so you can manipulate both the same way and call the evaluation function. 
 
 But when you get an example of what an homoiconic language is, it is possible to see what is the **actual** idea behind it. And to do that, I will use the canonical example of homoiconicity: Lisp. 
 
