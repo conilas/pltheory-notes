@@ -1,4 +1,4 @@
-Okay, so it seems like late-binding is a big deal. Late binding was firstly introduced in 1969 (http://homepages.cs.ncl.ac.uk/brian.randell/NATO/nato1969.PDF) when talking *shit* about Lisp.
+Okay, so it seems like late-binding is a big deal. Late binding was firstly introduced in 1969[4] when talking *shit* about Lisp.
 
 The idea is to keep all the functions to be binded as late as possible. Let's say I've defined a method that calls ```z()```, but Z was not yet defined anywhere. The compiler should not complain: I may define this method at runtime, which means it cannot try to bind the value Z at compile time because it is really not yet defined. 
 
@@ -148,3 +148,4 @@ You can make your own conclusions from that.
 [1] - www.purl.org/stefan_ram/pub/doc_kay_oop_en
 [2] - https://dl.acm.org/citation.cfm?id=141537
 [3] - https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.115.5992
+[4] - http://homepages.cs.ncl.ac.uk/brian.randell/NATO/nato1969.PDF
