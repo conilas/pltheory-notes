@@ -22,18 +22,84 @@ class GreetOthers extends Test {
 class Main { 
   public static Test getIt(boolean which){
     if (which) return new GreetSelf();
-    return GreetOthers();
+    return new GreetOthers();
   }
   
-  public static void Main(String ...args){
-    Boolean which = <...> //some user input
+  public static void main(String ...args){
+    Boolean which = <...>; //some user input
     
-    getIt(which).greet(); //How would the compiler store this in a table?
+    Test t = getIt(which);
+
+    t.greet(); //How would the compiler store this in a table?
   }
 }
 ```
 
-This code example represents the idea of dynamic dispatch/some way of late binding in Java. You can see that the compiler does not have enough information to know which method will be called from which of the classes. It means that the value will be looked up at *runtime* -- the interpreter will have to check it!
+This code example represents the idea of dynamic dispatch/some way of late binding in Java. You can see that the compiler does not have enough information to know which method will be called from which of the classes. It means that the value will be looked up at *runtime* -- the interpreter/runtime will have to check it!
+
+# Multiple vs Single dispatch
+
+There's an addon here. Dynamic dispatch can be described as above, but in Java and C# we have what is called Single Dynamic Dispatch, or just Single Dispatch (the term dispatch is most commonly used when talking about the definition of methods dynamically, so we can just say it like that). 
+
+The idea of Single Dispatch is to base the dynamicity only on one argument: the object who will receive the message. If you go back and look at the example, it is easy to see that the only part that has to be checked at runtime is the caller object - the arguments passed through that message do not vary. What if we had that same polymorphic idea, but also having to define the arguments types at runtime? 
+
+Let's extend our example. We will now have overloaded methods defined in our objects, and this polymorphism will still be based on the types we are working with (GreetSelf, GreeOther and Greet).
+
+```java
+abstract class Test{
+  public abstract void greet();
+  public abstract void greet(Test self);
+  public abstract void greet(GreetSelf self);
+  public abstract void greet(GreetOthers self);
+}
+
+class GreetSelf extends Test {
+  public void greet() { System.out.println("Greeting self !"); }
+
+  public void greet(Test self) { System.out.println("Greeting self with test..."); }
+  public void greet(GreetSelf self) { System.out.println("Greeting self with self "); }
+  public void greet(GreetOthers others) { System.out.println("Greeting self with others"); }
+}
+
+class GreetOthers extends Test {
+  public void greet() { System.out.println("Greeting others !"); }
+
+    public void greet(Test self) { System.out.println("Greeting other with test..."); }
+  public void greet(GreetSelf self) { System.out.println("Greeting other with self "); }
+  public void greet(GreetOthers others) { System.out.println("Greeting other with others"); }
+}
+
+class Main { 
+  public static Test getIt(boolean which){
+    if (which) return new GreetSelf();
+    return new GreetOthers();
+  }
+  
+  public static void main(String ...args){
+    Boolean which = false; 
+    
+    Test t = getIt(which);
+
+    t.greet(); //How would the compiler store this in a table?
+    t.greet(t); 
+  }
+}
+```
+
+**Note**: The user input was removed in this case so that it easier to see which instance we have.
+
+And our output:
+
+```
+Greeting others !
+Greeting other with test... 
+```
+
+*Can you see the magnitude of this?*. We have called both times methods from ```GreetOthers``` just as expected. But in the second call, although the compiler *knew* the type of the argument - which we can see because it called the correct implementation of the methods-, it was not able to pick the right implementation of the function when that dependend on the arguments. In this case, this is mostly due the fact that Java implements ad-hoc polymorphism (overloading, in Javish lango) at compile-time, which doesn't *at all* feels like late binding!
+
+Real dynamic languages are actually able to do that. CLOS implements multimethods, as does Dylan. 
+
+If you want, you can read on the idea of multiple dispatch and the relation of it with late binding in [2]. Funny thing is: it led to the formalization of covariance vs contravariance issue in object oriented languages[3], which is the subject of another post in this blog!
 
 # Real late binding
 
@@ -80,3 +146,5 @@ You can make your own conclusions from that.
 # References
 
 [1] - www.purl.org/stefan_ram/pub/doc_kay_oop_en
+[2] - https://dl.acm.org/citation.cfm?id=141537
+[3] - https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.115.5992
