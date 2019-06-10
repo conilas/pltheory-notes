@@ -146,6 +146,9 @@ You can make your own conclusions from that.
 # References
 
 [1] - www.purl.org/stefan_ram/pub/doc_kay_oop_en
+
 [2] - https://dl.acm.org/citation.cfm?id=141537
+
 [3] - https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.115.5992
+
 [4] - http://homepages.cs.ncl.ac.uk/brian.randell/NATO/nato1969.PDF
