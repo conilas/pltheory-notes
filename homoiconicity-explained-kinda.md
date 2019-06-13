@@ -26,7 +26,23 @@ Now, if you try to print x, you'd probably have ```(* 6 9)```, which is exactly 
 
 ## Historically speaking
 
-Started with TRAC in the sixties, then talk about Lisp and how HeCoinedTheTerm (talk about how Kay spoke about the term).
+So historically speaking, the term "homoiconic" can be tracked down to the 60's with a language called TRAC. The TRAC language was used to handle text events and it states that every instance of a thing is a string. So, well, everything is a string; and a string can be manipulated as procedures, as text or as anything that you will. The paper itself[1] has in the abstract the following statement:
+
+> [..] Any string can be treated at any time as text, name, or program.
+
+Which is precisely what (the majority of people think) the term means - it represents strings as first class constructs and handles it that way, the same with actual code. 
+
+Well, the attentive reader could say "but LISP is from the 50's, how come is TRACK attributed to that?" 
+
+The thing is: it is not about who came first, but who coined the term - do you remember the Smalltalk vs Simula 67 war?. The TRACK paper[1] states that the term homoiconic is applicable here because of the same way the strings and code are represented both in and out the processor. 
+
+To be honest, the first mention of homoiconicity that I'm aware of when refereing to LISP was in Alan Kay's PhD Thesis[2]. In it, he says:
+
+> A notable group of exceptions to all the previous systems are Interactive LISP (found on the Q32 (25), SDS-940 ((26), PDP-10 (27), etc.) and TRAC (28). Both are functionally oriented (one list, the other string), both talk to the user with one language, and both are homo-iconic (28) in that their internal and external representations are essentially the same. They both have the ability to dynamically create new functions which may then be elaborated at the user's pleasure.
+
+Yeah, I know, I know. Alan kay yet again inside another WhoCoinedTheTerm war? The heck!
+
+As time went by, many languages started to use LISP and TRAC as sources of inspiration, pursuing homoiconicity as a necessary condition for their language. Some languages that came later include TCL, and another recent example is IO[4]. 
 
 ## Meta-circular evaluator & macros
 
@@ -54,3 +70,11 @@ If we talk about weak/strong homoiconic languages, show that we came to yet anot
 )
 
 ## References
+
+[1] - https://dl.acm.org/citation.cfm?doid=800197.806048
+
+[2] - www.mprove.de/diplom/gui/kay69.html
+
+[3] - https://www.tcl.tk/about/language.html
+
+[4] - https://iolanguage.org/
