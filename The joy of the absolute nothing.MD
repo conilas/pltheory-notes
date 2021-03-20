@@ -17,7 +17,7 @@ LET US BEGIN WITH THE CLASSIC NUMBER 1:
 Go To Statement Considered Harmful
 ```
 
-... said no one c hardcode ultrabush megablaster rockstar 10xer evah!! Nah, I'm playing. But this one has a funny store behind it. 
+... said no one c hardcore ultra megablaster rockstar 10xer evah!! Nah, I'm playing. But this one has a funny store behind it. 
 
 When Dijkstra sent this paper out, THE DUDE from the 60~70s (idk) himself was there. NIKLAUS WRITH, YES! If you went through game hacking around the years 2010-2014 in the web (or maybe some other time; I recall this one), then you may have played around with Delphi 7 or VB (.net iirc?). For those who were lucky to play in the marvelous playground we had for delphi (was delphi a language classified as a descendant of pascal? or whas it simply RAD?), you will be happy to know that this guy is involved with that. I could not code sh*t back at that time, just copy/pasted stuff around and did not even begin to understand what was happening. If there was a variable with some wrong identifier, it would take me 5 minutes to find it. BUT NOT THIS GUY! He has some dope stuff - I believe he was in the Algol pannel, came up with Algol W, etc. Pascal was one of the free big open source languages with some form of bootstrapping (compilers compiling compilers :tm:). 
 
