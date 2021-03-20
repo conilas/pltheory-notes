@@ -17,13 +17,13 @@ LET US BEGIN WITH THE CLASSIC NUMBER 1:
 Go To Statement Considered Harmful
 ```
 
-... said no one c hardcore ultra megablaster rockstar 10xer evah!! Nah, I'm playing. But this one has a funny store behind it. 
+... said no one c hardcore ultra megablaster rockstar 10xer evah!! I wanted a controlled touch of cringe mixed with buzzwords recruiters. Nah, I'm playing. But this one has a funny history behind it. 
 
 When Dijkstra sent this paper out, THE DUDE from the 60~70s (idk) himself was there. NIKLAUS WRITH, YES! If you went through game hacking around the years 2010-2014 in the web (or maybe some other time; I recall this one), then you may have played around with Delphi 7 or VB (.net iirc?). For those who were lucky to play in the marvelous playground we had for delphi (was delphi a language classified as a descendant of pascal? or whas it simply RAD?), you will be happy to know that this guy is involved with that. I could not code sh*t back at that time, just copy/pasted stuff around and did not even begin to understand what was happening. If there was a variable with some wrong identifier, it would take me 5 minutes to find it. BUT NOT THIS GUY! He has some dope stuff - I believe he was in the Algol pannel, came up with Algol W, etc. Pascal was one of the free big open source languages with some form of bootstrapping (compilers compiling compilers :tm:). 
 
 Anyway, I derailed a lot. Let me take a breath.
 
-Now for the interesting part: Dijkstra initially sent his paper entitled as "A Case Against the Goto Statement". The fella I mentioned before probably jumped and yelled "NO! let's get more media, make it like the met gala" or something and proposed a more profound and hurtful, the famous "Go to statement considered harmful". Easy like that, it was a blast! 
+Now for the interesting part: Dijkstra initially sent his paper with a great title: "A Case Against the Goto Statement". The fella I mentioned before probably jumped and yelled "NO! let's get more media, make it like the met gala" or something and proposed a more profound and hurtful message, the famous "Go to statement considered harmful". Easy like that, it was a blast! 
 
 I mean, wikipedia has some strong opinions on that. They claim "[...] The 1970s and 1980s saw a decline in the use of GOTO". There's not much data for that claim, but I make an even more strong point by saying that the usage of it has almost gone extinct with the last, say, few years and some events?
 
@@ -41,7 +41,7 @@ Now, for some extra sparkles on it. Guess who was against being against GOTO? Li
 
 Somebody could say something like "what about the guy who finds himself in a triple nested for loop? HA - GOT YOU!" - they want a freaking workaround in the language to be just like how all of our programs are composed of. We are terrible developers. And after that they claim that this form of expressive list manipulations (list expressions) is just showoff crap. Maybe it is. They made the kernel, not you.
 
-But, OTOH, we have Dikstra; you've probably seem something about 'oh, take the shortest path here'. Now you can play with the signifying chain and say 'oh, I will make use of the Dijkstra's algorithm to make it there and so I will, in optimal time`. He's fire is what I mean here. Niklaus writh, the guy from above, delivered a manual of Pascal that advices against the use of goto. 
+But, OTOH, we have Dikstra; you've probably read something about 'oh, take the shortest path here'. Now you can play with the signifying chain and say 'oh, I will make use of the Dijkstra's algorithm to make it there and so I will, in optimal time`. He's fire is what I mean here. Niklaus writh, the guy from above, delivered a manual of Pascal that advices against the use of goto. 
 
 Amazing fight. Who won?
 
