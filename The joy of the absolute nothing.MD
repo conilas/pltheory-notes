@@ -5,7 +5,7 @@ The spectro duck went ahead after all of its past and got a beer. Explosion, coc
 - some zoomer meme idk
 ```
 
-HAHA! jokes. I spent 5 minutes thinking on which punctuation to use after the laugh. But i'm seriously fun or, as they claim; the encarnation of the oximoron.
+HAHA! jokes. I spent 5 minutes thinking on which punctuation to use after the laugh. But i'm seriously fun or, as they claim, the encarnation of the oximoron.
 
 The weird people that make computer go bip bop, the ones apart from us who play with meshing random foss stuff together and go home happy to drink a beer - they have their jokes too!
 
